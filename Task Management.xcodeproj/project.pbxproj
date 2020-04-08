@@ -31,7 +31,7 @@
 		16A162B0243C4F9300D8D931 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		16A162B2243C5F5D00D8D931 /* Tasks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
 		16A162B4243C5FA600D8D931 /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Shop.storyboard; path = "Task Management/Dashboard/View/Shop.storyboard"; sourceTree = SOURCE_ROOT; };
-		16A162B6243C5FF000D8D931 /* NewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewTask.storyboard; path = ../NewTask.storyboard; sourceTree = "<group>"; };
+		16A162B6243C5FF000D8D931 /* NewTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewTask.storyboard; sourceTree = "<group>"; };
 		16A162B8243C606200D8D931 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		37FA60BE2438AF6D00EA639E /* Task Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FA60C12438AF6D00EA639E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
