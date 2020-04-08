@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4N7-zI-WiG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tasks-->
+        <scene sceneID="YUN-Nj-94C">
+            <objects>
+                <viewController title="Tasks" id="4N7-zI-WiG" customClass="TasksViewController" customModule="Task_Management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FbC-Zi-eO8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cG-h9-DDZ">
+                                <rect key="frame" x="20" y="832" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New Task"/>
+                                <connections>
+                                    <segue destination="Ec9-53-TF2" kind="show" id="8nM-fN-0uG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="abf-8h-3ar"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tasks" id="StB-ly-lNx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ikk-ag-M8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="138"/>
+        </scene>
+        <!--NewTask-->
+        <scene sceneID="Ht9-ha-iiw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewTask" id="Ec9-53-TF2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Jr-yy-Zts"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtA-6m-5sv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3368" y="138"/>
+        </scene>
+    </scenes>
+</document>
