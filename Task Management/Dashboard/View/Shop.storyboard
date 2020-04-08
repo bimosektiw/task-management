@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="o2n-Oz-QTC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h2H-28-f5M"/>
+                    <navigationItem key="navigationItem" title="Shop" id="h2H-28-f5M"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wn5-E0-zDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

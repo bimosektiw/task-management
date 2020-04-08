@@ -42,7 +42,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kTO-lQ-2lc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Kw4-Yj-juy"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="Kw4-Yj-juy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnA-Hn-sSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

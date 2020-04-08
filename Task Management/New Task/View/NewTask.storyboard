@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Imz-X4-XXr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sdR-Vw-gad"/>
+                    <navigationItem key="navigationItem" title="New Task" id="sdR-Vw-gad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awN-zt-g3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
