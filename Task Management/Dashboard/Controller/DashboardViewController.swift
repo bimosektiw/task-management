@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController {
         labelCoinBorder.layer.borderWidth = 2
         labelCoinBorder.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
+        navigationController?.title = "Dashboard"
     }
     
 
