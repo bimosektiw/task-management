@@ -9,14 +9,26 @@
 import UIKit
 
 class NewTaskViewController: UIViewController {
+    
+    var tasksDelegate: TasksDelegate?
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var durationTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        
+        guard let title = titleTextField.text else { return }
+        guard let duration = durationTextField.text else { return }
+        tasksDelegate?.insertTask(title: title, category: .pentingMendesak, duration: Int(duration)!)
+    }
+    
     /*
     // MARK: - Navigation
 
