@@ -26,7 +26,7 @@ class NewTaskViewController: UIViewController {
         
         guard let title = titleTextField.text else { return }
         guard let duration = durationTextField.text else { return }
-        tasksDelegate?.insertTask(title: title, category: .pentingMendesak, duration: Int(duration)!)
+        tasksDelegate?.insertTask(title: title, category: Task.TaskCategory(rawValue: 0)!.rawValue, duration: Int(duration)!)
     }
     
     /*

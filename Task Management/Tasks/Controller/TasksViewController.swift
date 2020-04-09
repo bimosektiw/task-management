@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TasksDelegate {
-    func insertTask(title: String, category: Task.TaskCategory, duration: Int)
+    func insertTask(title: String, category: Int, duration: Int)
 }
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TasksDelegate {
@@ -65,7 +65,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func insertTask(title: String, category: Task.TaskCategory, duration: Int) {
+    func insertTask(title: String, category: Int, duration: Int) {
         TaskList.shared.insert(title: title, duration: duration, category: category)
         tasksTableView.reloadData()
     }
