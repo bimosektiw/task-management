@@ -8,7 +8,11 @@
 
 import UIKit
 
-class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol TasksDelegate {
+    func insertTask(title: String, category: Task.TaskCategory, duration: Int)
+}
+
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TasksDelegate {
 
     @IBOutlet weak var tasksTableView: UITableView!
     
@@ -52,14 +56,17 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? NewTaskViewController {
+            vc.tasksDelegate = self
+        }
     }
-    */
-
+    
+    func insertTask(title: String, category: Task.TaskCategory, duration: Int) {
+        TaskList.shared.insert(title: title, duration: duration, category: category)
+        tasksTableView.reloadData()
+    }
 }

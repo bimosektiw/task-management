@@ -32,7 +32,7 @@
                                 <rect key="frame" x="20" y="278" width="298" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-N7-mTY">
                                 <rect key="frame" x="20" y="249" width="66" height="21"/>
@@ -75,12 +75,19 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="4PA-A3-DdX" eventType="touchUpInside" id="tHJ-Wb-kTO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Imz-X4-XXr"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" id="sdR-Vw-gad"/>
+                    <connections>
+                        <outlet property="durationTextField" destination="FCV-br-mpT" id="i65-Sj-4UY"/>
+                        <outlet property="titleTextField" destination="WZa-a8-g2D" id="JL6-rz-FaO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awN-zt-g3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
