@@ -19,5 +19,7 @@ struct Task {
     let title: String
     let duration: Int
     let completed: Bool
-    let category: TaskCategory
+    let category: TaskCategory.RawValue
+    let order: Int
+    let id: Int
 }
