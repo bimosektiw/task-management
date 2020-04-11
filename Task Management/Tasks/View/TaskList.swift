@@ -13,7 +13,7 @@ import UIKit
 class TaskList {
     static let shared = TaskList()
     
-    func insert(title: String, duration: Int, category: Int) {
+    func insert(title: String, duration: Int, category: Int, completed: Bool = false) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
@@ -34,7 +34,7 @@ class TaskList {
         task.setValue(title, forKeyPath: "title")
         task.setValue(duration, forKey: "duration")
         task.setValue(category, forKey: "category")
-        task.setValue(false, forKey: "completed")
+        task.setValue(completed, forKey: "completed")
         task.setValue(order.count, forKey: "order")
 
         do {
@@ -46,7 +46,7 @@ class TaskList {
     }
     
     func getTasksForCategoryNumber(_ categoryNumber: Int) -> [Task] {
-        if categoryNumber > 4 {
+        if categoryNumber > 3 {
             return [Task]()
         } else {
             return self.getAllTask().filter{$0.category == categoryNumber}
@@ -85,7 +85,7 @@ class TaskList {
          let managedContext = appDelegate.persistentContainer.viewContext
          
          let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
-         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+         fetchRequest.predicate = NSPredicate(format: "id = %@", "\(id)")
         
          do
          {
