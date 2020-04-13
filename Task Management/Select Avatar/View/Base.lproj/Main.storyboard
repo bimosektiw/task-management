@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Mb-52-PGK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Mb-52-PGK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +19,18 @@
                                 <rect key="frame" x="17" y="159" width="380" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="body-1" translatesAutoresizingMaskIntoConstraints="NO" id="icE-9Z-YM9">
+                                        <rect key="frame" x="51" y="63" width="277" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Crew_Neck_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="azO-Th-7dk">
+                                        <rect key="frame" x="51" y="63" width="277" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hair-default" translatesAutoresizingMaskIntoConstraints="NO" id="ODI-72-kBK">
+                                        <rect key="frame" x="51" y="63" width="277" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e0-oC-lUa">
                                         <rect key="frame" x="19" y="417" width="343" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,9 +38,16 @@
                                         <color key="tintColor" red="0.0" green="0.67450980392156867" blue="0.7803921568627451" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
-                                            <segue destination="hxS-e3-Q72" kind="show" id="sec-fW-GXo"/>
+                                            <action selector="setUserDefault:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqC-Zu-7o7"/>
+                                            <segue destination="hxS-e3-Q72" kind="show" identifier="" id="sec-fW-GXo"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Character Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-Pc-PJi">
+                                        <rect key="frame" x="19" y="366" width="343" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -51,6 +70,7 @@ you may customize them as you wish!</string>
                     <connections>
                         <outlet property="selectAvatarSection" destination="dMk-PC-Jgm" id="Cdd-rE-PKs"/>
                         <outlet property="selectButtonLabel" destination="4e0-oC-lUa" id="jQY-ZH-B8f"/>
+                        <outlet property="textFieldCharacterName" destination="Mle-Pc-PJi" id="snL-5a-2lo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,7 +98,7 @@ you may customize them as you wish!</string>
         <!--Dashboard-->
         <scene sceneID="DO9-Bi-bqD">
             <objects>
-                <viewControllerPlaceholder storyboardName="Dashboard" id="hxS-e3-Q72" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="dashboardVC" storyboardName="Dashboard" id="hxS-e3-Q72" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="po9-KE-hlV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atK-iV-mEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,4 +106,9 @@ you may customize them as you wish!</string>
             <point key="canvasLocation" x="1700" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Crew_Neck_Blue" width="277" height="277"/>
+        <image name="body-1" width="280" height="280"/>
+        <image name="hair-default" width="277" height="277"/>
+    </resources>
 </document>
