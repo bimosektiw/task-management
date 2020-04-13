@@ -114,8 +114,8 @@ class TaskList {
          
          let managedContext = appDelegate.persistentContainer.viewContext
          
-         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "User")
-         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Tasks")
+         fetchRequest.predicate = NSPredicate(format: "id = %@", "\(id)")
          do
          {
              let test = try managedContext.fetch(fetchRequest)

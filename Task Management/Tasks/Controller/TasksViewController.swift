@@ -83,15 +83,18 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Are you sure you want to complete this task?", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-            let task = TaskList.shared.getTasksForCategoryNumber(indexPath.section)[indexPath.row]
-            TaskList.shared.deleteTaskById(id: task.id)
-            TaskList.shared.insert(title: task.title, duration: task.duration, category: indexPath.section, completed: true)
-            self.tasksTableView.reloadData()
-        }))
-        present(alert, animated: true, completion: nil)
+        let task = TaskList.shared.getTasksForCategoryNumber(indexPath.section)[indexPath.row]
+        
+        if !task.completed {
+            let alert = UIAlertController(title: "Are you sure you want to complete this task?", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                let task = TaskList.shared.getTasksForCategoryNumber(indexPath.section)[indexPath.row]
+                TaskList.shared.changeCompletedTaskById(id: task.id, completed: true)
+                self.tasksTableView.reloadData()
+            }))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
 
