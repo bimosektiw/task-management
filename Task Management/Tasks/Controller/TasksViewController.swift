@@ -28,6 +28,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setupView() {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(onEditTapped))
