@@ -29,6 +29,16 @@ class NewTaskViewController: UIViewController {
         fourthCategory.layer.cornerRadius = 10
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     @IBAction func categoryTapped(_ sender: UIButton) {
         switch sender {
             case fourthCategory:

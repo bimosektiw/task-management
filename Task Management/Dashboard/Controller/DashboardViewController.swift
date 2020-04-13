@@ -66,6 +66,12 @@ class DashboardViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     // Function Running every Page loaded
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -26,7 +26,16 @@ class SelectAvatarViewController: UIViewController {
         selectAvatarSection.backgroundColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
         selectAvatarSection.layer.cornerRadius = 12
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     @IBAction func setUserDefault(_ sender: UIButton) {
         // Set Username ( Write for UserDefaults )
         let userDefaults = UserDefaults()
