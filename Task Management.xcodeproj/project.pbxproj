@@ -23,6 +23,7 @@
 		37FA60CE2438AF6E00EA639E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FA60CD2438AF6E00EA639E /* Assets.xcassets */; };
 		37FA60D12438AF6E00EA639E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FA60CF2438AF6E00EA639E /* LaunchScreen.storyboard */; };
 		A85C71BA243EE26C00AEF230 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C71B9243EE26C00AEF230 /* CollectionViewCell.swift */; };
+		A85C71BC2444394600AEF230 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85C71BB2444394600AEF230 /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		37FA60D02438AF6E00EA639E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37FA60D22438AF6E00EA639E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A85C71B9243EE26C00AEF230 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A85C71BB2444394600AEF230 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				A85C71B9243EE26C00AEF230 /* CollectionViewCell.swift */,
+				A85C71BB2444394600AEF230 /* CollectionReusableView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				37FA60C62438AF6D00EA639E /* SelectAvatarViewController.swift in Sources */,
 				16A162B9243C606200D8D931 /* TasksViewController.swift in Sources */,
 				A85C71BA243EE26C00AEF230 /* CollectionViewCell.swift in Sources */,
+				A85C71BC2444394600AEF230 /* CollectionReusableView.swift in Sources */,
 				16A162AF243C4D5700D8D931 /* DashboardViewController.swift in Sources */,
 				16A162A5243C4A1E00D8D931 /* NewTaskViewController.swift in Sources */,
 				16A162AA243C4B5300D8D931 /* ShopViewController.swift in Sources */,
