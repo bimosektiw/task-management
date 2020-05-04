@@ -101,6 +101,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="o2n-Oz-QTC"/>
                     </view>
+
                     <navigationItem key="navigationItem" id="h2H-28-f5M"/>
                     <connections>
                         <outlet property="accessoriesImage" destination="s3Q-Br-v1H" id="nqZ-hg-0eX"/>
@@ -109,6 +110,7 @@
                         <outlet property="collectionView" destination="3xk-Nh-eHJ" id="GpK-jF-VmC"/>
                         <outlet property="hairImage" destination="2JW-wW-Bvz" id="TkA-9S-8sa"/>
                     </connections>
+
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="847.76785714285711"/>
