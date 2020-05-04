@@ -4,33 +4,123 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Shop-->
         <scene sceneID="QMO-Sg-y52">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wn5-E0-zDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Shop" id="3QL-ag-xhA" customClass="ShopViewController" customModule="Task_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcd-ry-Zfb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygX-r4-CvX">
-                                <rect key="frame" x="187" y="438" width="40" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3xk-Nh-eHJ">
+                                <rect key="frame" x="0.0" y="478" width="414" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Yk-W0-qwH">
+                                    <size key="itemSize" width="116" height="162"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="dEf-zp-OLb" customClass="CollectionViewCell" customModule="Task_Management" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="116" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4IO-Sx-9Mb">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="162"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="504-Ks-5Rs">
+                                                    <rect key="frame" x="0.0" y="127" width="116" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.92058250099646233" green="1" blue="0.93654149600499215" alpha="0.653169014084507" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="Equip">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                </button>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="accessories-1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zv5-Mw-0js">
+                                                    <rect key="frame" x="3" y="18" width="113" height="101"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="116" height="162"/>
+                                        <connections>
+                                            <outlet property="buttonItem" destination="504-Ks-5Rs" id="T7H-TJ-o25"/>
+                                            <outlet property="cellView" destination="4IO-Sx-9Mb" id="SM1-ny-rTG"/>
+                                            <outlet property="imageItem" destination="zv5-Mw-0js" id="clW-OG-dCt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="reusableView" id="BMW-Aa-3JP" customClass="CollectionReusableView" customModule="Task_Management" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-qh-P1y">
+                                            <rect key="frame" x="68" y="7" width="309" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.93502008729999997" green="1" blue="0.75460995450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <outlet property="titleCollection" destination="7WJ-qh-P1y" id="JLv-7I-IPf"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="3QL-ag-xhA" id="hdL-NN-hpu"/>
+                                    <outlet property="delegate" destination="3QL-ag-xhA" id="mUq-se-7DJ"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="body-1" translatesAutoresizingMaskIntoConstraints="NO" id="4dv-Gj-61Q">
+                                <rect key="frame" x="69" y="158" width="277" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clothes-4" translatesAutoresizingMaskIntoConstraints="NO" id="9EW-Va-0Cr">
+                                <rect key="frame" x="69" y="158" width="277" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hair-4" translatesAutoresizingMaskIntoConstraints="NO" id="2JW-wW-Bvz">
+                                <rect key="frame" x="69" y="158" width="277" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="accessories-3" translatesAutoresizingMaskIntoConstraints="NO" id="s3Q-Br-v1H">
+                                <rect key="frame" x="69" y="158" width="277" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="o2n-Oz-QTC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shop" id="h2H-28-f5M"/>
+
+                    <navigationItem key="navigationItem" id="h2H-28-f5M"/>
+                    <connections>
+                        <outlet property="accessoriesImage" destination="s3Q-Br-v1H" id="nqZ-hg-0eX"/>
+                        <outlet property="avatarImage" destination="4dv-Gj-61Q" id="Fhw-FF-bQA"/>
+                        <outlet property="clothesImage" destination="9EW-Va-0Cr" id="Eps-k1-lN4"/>
+                        <outlet property="collectionView" destination="3xk-Nh-eHJ" id="GpK-jF-VmC"/>
+                        <outlet property="hairImage" destination="2JW-wW-Bvz" id="TkA-9S-8sa"/>
+                    </connections>
+
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wn5-E0-zDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="848"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="847.76785714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="accessories-1" width="280" height="280"/>
+        <image name="accessories-3" width="280" height="280"/>
+        <image name="body-1" width="280" height="280"/>
+        <image name="clothes-4" width="280" height="280"/>
+        <image name="hair-4" width="280" height="280"/>
+    </resources>
 </document>
